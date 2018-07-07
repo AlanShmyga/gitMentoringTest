@@ -8,7 +8,7 @@ from selenium.webdriver.common.keys import Keys
 @pytest.fixture()
 def driver(request):
     web_driver = webdriver.Chrome()
-    web_driver.implicitly_wait(10)
+    web_driver.implicitly_wait(5)
     request.addfinalizer(web_driver.quit)
     return web_driver
 
